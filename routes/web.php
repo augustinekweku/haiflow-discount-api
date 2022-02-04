@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('app')->group(function(){
+Route::prefix('api')->group(function(){
 Route::get('/postcode/{code}',[DiscountCodesController::class, 'PostCode']);
 Route::get('/get_all_codes',[DiscountCodesController::class, 'getAllCodes']);
 Route::get('/update_code_status/{code}',[DiscountCodesController::class, 'updateCodeStatus']);
