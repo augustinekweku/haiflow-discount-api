@@ -18,6 +18,7 @@ Route::prefix('api')->group(function(){
 Route::get('/postcode/{code}',[DiscountCodesController::class, 'PostCode']);
 Route::get('/get_all_codes',[DiscountCodesController::class, 'getAllCodes']);
 Route::get('/update_code_status/{code}',[DiscountCodesController::class, 'updateCodeStatus']);
+Route::get('/get_unused_codes',[DiscountCodesController::class, 'getUnusedCodes']);
 });
 
 Route::get('/', function () {

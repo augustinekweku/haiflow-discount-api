@@ -19,10 +19,15 @@ class DiscountCodesController extends Controller
     {
         return Discount_codes::orderBy('id', 'desc')->get();
     }
+
     public function updateCodeStatus($code)
     {
         return Discount_codes::where('code', $code)->update([
             'status' => 'used'
         ]);
+    }
+    public function getUnusedCodes($code)
+    {
+        return Discount_codes::where('status', 'unused')->get();
     }
 }
