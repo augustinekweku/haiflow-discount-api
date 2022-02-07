@@ -26,7 +26,7 @@ class DiscountCodesController extends Controller
             'status' => 'used'
         ]);
     }
-    public function getUnusedCodes($code)
+    public function getUnusedCodes()
     {
         return Discount_codes::where('status', 'unused')->get();
     }
